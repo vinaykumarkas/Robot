@@ -21,6 +21,10 @@ Commands
 
 Listed below are the details of commands that can be used to move/command Robot Replica.
 
+PLACE:
+Place the robot on the table with co-ordinates X &Y 
+example - PLACE 1,2
+
 LEFT:
 Robot turns left from the existing position
 

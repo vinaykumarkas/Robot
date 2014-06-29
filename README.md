@@ -20,3 +20,10 @@ Commands
 ========
 
 Listed below are the details of commands that can be used to move/command Robot Replica.
+
+LEFT:
+Robot turns left from the existing position
+
+RIGHT:
+Robot turns right from the existing position
+

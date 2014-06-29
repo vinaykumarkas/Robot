@@ -12,7 +12,7 @@ describe 'Robot' do
     @robot = Robot.new
   end
 
-  describe 'orient' do
+  describe '#orient' do
 
     it 'allows to orient :north' do
       expect(@robot.orient(:north)).not_to eq(nil)
@@ -36,7 +36,7 @@ describe 'Robot' do
 
   end
 
-  describe 'orientation' do
+  describe '#orientation' do
 
     it 'is nil initially' do
       expect(@robot.orientation).to eq(nil)
@@ -55,7 +55,7 @@ describe 'Robot' do
     end
   end
 
-  describe 'left' do
+  describe '#left' do
 
     describe 'when facing south' do
 
@@ -109,7 +109,7 @@ describe 'Robot' do
 
   end
 
-  describe 'right' do
+  describe '#right' do
 
     describe 'when facing south' do
 

@@ -1,6 +1,7 @@
 require_relative 'tabletop'
 require_relative 'robot'
 require_relative 'robot_commands/place'
+require_relative 'robot_commands/report'
 
 
 class Simulator
@@ -20,7 +21,7 @@ class Simulator
     when 'PLACE'
       place(arguments)
     when 'REPORT'
-      #report
+      report
     when 'MOVE'
       #move
     when 'LEFT'

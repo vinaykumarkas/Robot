@@ -90,6 +90,16 @@ describe 'Simulator' do
           end
 
         end
+        describe 'MOVE' do
+
+          it 'displays warning message but does nothing' do
+            @robot.should_not_receive(:vector)
+            @table.should_not_receive(:position)
+            @table.should_not_receive(:place)
+            expect(@simulator.execute('MOVE')).to eq('MOVE command will be ignored till robot PLACEment is performed')
+          end
+
+        end
 
       end
 
@@ -147,6 +157,34 @@ describe 'Simulator' do
             @robot.should_receive(:right)
 
             @simulator.execute('RIGHT')
+          end
+
+        end
+
+        describe 'MOVE' do
+
+          describe 'to a valid location on tabletop' do
+
+            it 'receives a vector for movement from the robot and applies it to the table' do
+              @robot.should_receive(:vector).and_return({ x: 1, y: 1 })
+              @table.should_receive(:position).and_return({ x: 1, y: 1 })
+              @table.should_receive(:place).with(2, 2)
+
+              @simulator.execute('MOVE')
+            end
+
+          end
+
+          describe 'getting off the table' do
+
+            it 'displays warning message and does not move the robot off the table' do
+              @robot.should_receive(:vector).and_return({ x: 1, y: 1 })
+              @table.should_receive(:position).and_return({ x: 4, y: 4 })
+              @table.should_receive(:place).with(5, 5).and_return(nil)
+
+              expect(@simulator.execute('MOVE')).to eq('MOVE off the table ignored')
+            end
+
           end
 
         end

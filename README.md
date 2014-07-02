@@ -18,13 +18,18 @@ Below are the steps that specify how to execute the Robot program.
 
 Listed below are the details of commands that can be used to move/command Robot Replica.
 
-###PLACE
+####PLACE
 Place the robot on the table with co-ordinates X &Y 
 example - PLACE 1,2
 
-###LEFT
+####LEFT
 Robot turns left from the existing position
 
-###RIGHT
+####RIGHT
 Robot turns right from the existing position
 
+####REPORT
+Displays the position of the Robot and Orientation
+
+####EXIT
+Aborts the execution of the program

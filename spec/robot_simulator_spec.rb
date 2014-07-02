@@ -73,6 +73,24 @@ describe 'Simulator' do
 
         end
 
+        describe 'LEFT' do
+
+          it 'displays warning message but does nothing' do
+            @robot.should_not_receive(:left)
+            expect(@simulator.execute('LEFT')).to eq('LEFT command will be ignored till robot PLACEment is performed')
+          end
+
+        end
+
+        describe 'RIGHT' do
+
+          it 'displays warning message but does nothing' do
+            @robot.should_not_receive(:right)
+            expect(@simulator.execute('RIGHT')).to eq('RIGHT command will be ignored till robot PLACEment is performed')
+          end
+
+        end
+
       end
 
     end
@@ -113,6 +131,25 @@ describe 'Simulator' do
 
         end
 
+        describe 'LEFT' do
+
+          it 'commands robot to turn left' do
+            @robot.should_receive(:left)
+
+            @simulator.execute('LEFT')
+          end
+
+        end
+
+        describe 'RIGHT' do
+
+          it 'commands robot to turn right' do
+            @robot.should_receive(:right)
+
+            @simulator.execute('RIGHT')
+          end
+
+        end
       end
 
     end

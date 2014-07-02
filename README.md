@@ -8,7 +8,7 @@ for more details check the specification document.
 
 This app can be in multiple waysas explained below:
 
-If you have [Git](http://git-scm.com/downloads), you can clone the project from Git using below steps:
+If you have [Git](http://git-scm.com/downloads), you can clone the project from [Git](http://git-scm.com/downloads) using below steps:
    
     git clone https://github.com/vinaykumarkas/Robot.git 
     cd Robot

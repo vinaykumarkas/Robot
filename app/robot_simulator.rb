@@ -2,6 +2,8 @@ require_relative 'tabletop'
 require_relative 'robot'
 require_relative 'robot_commands/place'
 require_relative 'robot_commands/report'
+require_relative 'robot_commands/left'
+require_relative 'robot_commands/right'
 
 
 class Simulator
@@ -25,9 +27,9 @@ class Simulator
     when 'MOVE'
       #move
     when 'LEFT'
-      #left
+      left
     when 'RIGHT'
-      #right
+      right
     when 'EXIT'
       puts "Exiting the Robot program .... Good Bye !!"
       abort

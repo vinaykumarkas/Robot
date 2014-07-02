@@ -63,6 +63,16 @@ describe 'Simulator' do
 
         end
 
+        describe 'REPORT' do
+
+          it 'displays the warning message to the user, but does nothing' do
+            @table.should_not_receive(:position)
+            @robot.should_not_receive(:orientation)
+            expect(@simulator.execute('REPORT')).to eq('REPORT command will be ignored till robot PLACEment is performed')
+          end
+
+        end
+
       end
 
     end
@@ -92,6 +102,17 @@ describe 'Simulator' do
             expect(@simulator.execute('PLACE SOME WOMBLES')).to eq('PLACE command will be ignored till valid arguments are provided')
           end
         end
+
+        describe 'REPORT' do
+
+          it 'returns the location and orientation' do
+            @table.should_receive(:position).and_return({ x: 1, y: 2 })
+            @robot.should_receive(:orientation).and_return(:south)
+            expect(@simulator.execute('REPORT')).to eq('1,2,SOUTH')
+          end
+
+        end
+
       end
 
     end

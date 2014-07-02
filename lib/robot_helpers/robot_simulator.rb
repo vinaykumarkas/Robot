@@ -1,10 +1,10 @@
 require_relative 'tabletop'
 require_relative 'robot'
-require_relative 'robot_commands/place'
-require_relative 'robot_commands/report'
-require_relative 'robot_commands/left'
-require_relative 'robot_commands/right'
-require_relative 'robot_commands/move'
+require_relative '../robot_commands/place'
+require_relative '../robot_commands/report'
+require_relative '../robot_commands/left'
+require_relative '../robot_commands/right'
+require_relative '../robot_commands/move'
 
 
 class Simulator

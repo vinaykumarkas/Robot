@@ -1,4 +1,4 @@
-require_relative 'robot_simulator'
+require_relative 'robot_helpers/robot_simulator'
 
 simulator = Simulator.new
 puts "Please command the Robot: "

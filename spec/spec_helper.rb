@@ -1,4 +1,4 @@
-require_relative '../app/robot_simulator.rb'
+require_relative '../lib/robot_helpers/robot_simulator.rb'
 
 RSpec.configure do |configure|
   configure.mock_with :rspec do |config|

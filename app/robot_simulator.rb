@@ -4,6 +4,7 @@ require_relative 'robot_commands/place'
 require_relative 'robot_commands/report'
 require_relative 'robot_commands/left'
 require_relative 'robot_commands/right'
+require_relative 'robot_commands/move'
 
 
 class Simulator
@@ -25,7 +26,7 @@ class Simulator
     when 'REPORT'
       report
     when 'MOVE'
-      #move
+      move
     when 'LEFT'
       left
     when 'RIGHT'

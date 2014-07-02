@@ -1,3 +1,8 @@
+=begin
+Spec class having test cases for verifying the tabletop specifications.
+This class tests various position and placements on tabletop
+=end
+
 require 'spec_helper'
 
 describe 'Table' do

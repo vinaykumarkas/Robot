@@ -1,7 +1,8 @@
 =begin
   This is Robot class having the specifications for the Robot itself. 
   This class have the left, right, orient and orientation vector defined 
-  which are useful for movements of the Robot on Tabletop
+  which are useful for movements of the Robot on Tabletop.
+  This class raises exception incase of invalid orientation.
 =end
 
 class Robot

@@ -1,3 +1,7 @@
+=begin
+Class for Tabletop specifications and for co-ordinates verification
+=end
+
 class Table
 
   attr_accessor :position

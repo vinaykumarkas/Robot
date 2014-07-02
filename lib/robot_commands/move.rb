@@ -1,3 +1,9 @@
+=begin
+Private class having a method for MOVEing Robot.
+This class returns a warning message if the Robot is not PLACed.
+This class returns a warning message if the Robot is falling off the table
+=end
+
 private
 
 def move

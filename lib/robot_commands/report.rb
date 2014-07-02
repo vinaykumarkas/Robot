@@ -1,3 +1,8 @@
+=begin
+Private class having a method for REPORTing position of Robot.
+This class returns a warning message if the Robot is not PLACed.
+=end
+
 private
 
 def report

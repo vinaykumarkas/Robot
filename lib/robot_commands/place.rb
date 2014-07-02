@@ -1,3 +1,8 @@
+=begin
+Private class having a method for PLACEing Robot.
+This class returns a warning message if arguments are provided.
+=end
+
 private
 
 def place(position)

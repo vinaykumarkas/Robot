@@ -1,3 +1,8 @@
+=begin
+Class having execute methods which processes the commands passed and calls the appropriate methods.
+This class ignores the invalid operations
+=end
+
 require_relative 'tabletop'
 require_relative 'robot'
 require_relative '../robot_commands/place'
@@ -5,8 +10,6 @@ require_relative '../robot_commands/report'
 require_relative '../robot_commands/left'
 require_relative '../robot_commands/right'
 require_relative '../robot_commands/move'
-
-
 class Simulator
   def initialize
     @table = Table.new

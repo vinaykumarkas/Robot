@@ -1,3 +1,8 @@
+=begin
+This class contains Spec test cases for testing robot simulator class
+This class tests various commands before and after placing robot on the table top
+=end
+
 require_relative 'spec_helper'
 
 describe 'Simulator' do

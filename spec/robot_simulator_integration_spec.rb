@@ -1,3 +1,8 @@
+=begin
+SPec class containing test cases for testing robot movement on robot table using robot simulatio.
+This class tests the integration between Robot and Simulator
+=end
+
 require 'spec_helper'
 
 describe 'Simulator' do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe 'Simulator' do
 
@@ -182,7 +182,7 @@ describe 'Simulator' do
               @table.should_receive(:position).and_return({ x: 4, y: 4 })
               @table.should_receive(:place).with(5, 5).and_return(nil)
 
-              expect(@simulator.execute('MOVE')).to eq('MOVE off the table ignored')
+              expect(@simulator.execute('MOVE')).to eq('MOVE command ignored because robot may fall off the tabletop')
             end
 
           end

@@ -7,6 +7,6 @@ def move
   if @table.place(position[:x] + vector[:x], position[:y] + vector[:y])
     nil
   else
-    'MOVE off the table ignored'
+    'MOVE command ignored because robot may fall off the tabletop'
   end
 end

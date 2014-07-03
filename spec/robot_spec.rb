@@ -4,7 +4,7 @@
   and right that are specified in Robot class.
 =end
 
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe 'Robot' do
 

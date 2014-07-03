@@ -5,15 +5,12 @@ This class ignores the invalid operations
 
 require_relative 'tabletop'
 require_relative 'robot'
-require_relative '../robot_commands/place'
-require_relative '../robot_commands/report'
-require_relative '../robot_commands/left'
-require_relative '../robot_commands/right'
-require_relative '../robot_commands/move'
+require_relative 'commands'
 class Simulator
   def initialize
     @table = Table.new
     @robot = Robot.new
+    @commands =Commands.new(@table,@robot)
   end
 
   def execute(command)
@@ -25,15 +22,15 @@ class Simulator
 
     case operation
     when 'PLACE'
-      place(arguments)
+      @commands.place(arguments)
     when 'REPORT'
-      report
+      @commands.report
     when 'MOVE'
-      move
+      @commands.move
     when 'LEFT'
-      left
+      @commands.left
     when 'RIGHT'
-      right
+      @commands.right
     when 'EXIT'
       puts "Exiting the Robot program .... Good Bye !!"
       abort

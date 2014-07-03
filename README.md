@@ -25,18 +25,28 @@ Ensure you have [Ruby 1.9.3](http://www.ruby-lang.org/en/downloads/) or [RVM](ht
 
 #Testing
 Once installation is completed using above steps, you can test the application using the Spec tests that are included as part of application testing framework.
-You can execute all the tests by using rake:
+
+* You can execute all the tests by using rake:
 	
 	CD to Robot folder (project root folder)
 	$
 	$ rake
 
+* You can execute each Spec class using below command:
+	
+	CD to spec folder (project root folder)
+	$
+	$ rspec robot_spec.rb
+	...............
+
+	Finished in 0.014 seconds (files took 0.40104 seconds to load)
+	15 examples, 0 failures
 
 #Running
 
 Below are the steps that specify how to execute the Robot program.
 
-### Commanding Robot interactively
+###Commanding Robot interactively
 	
 	$ ruby lib/robot_replica.rb
 	Please command the Robot:
@@ -54,6 +64,14 @@ Below are the steps that specify how to execute the Robot program.
 	EXIT
 	Exiting the Robot program .... Good Bye !!
 
+###Commanding Robot with list of commands from file
+Commands can also be executed from a file. List all the commands that has to be executed in a TXT file (one command for a line) and input this file to the robot replica class as given below
+	
+	example:
+	If commands are listed in commands.txt
+	$
+	$ cat commands.txt | lib/robot_replica.rb
+	
 
 ##Commands
 

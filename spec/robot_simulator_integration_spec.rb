@@ -3,7 +3,7 @@ SPec class containing test cases for testing robot movement on robot table using
 This class tests the integration between Robot and Simulator
 =end
 
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe 'Simulator' do
 
